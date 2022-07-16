@@ -99,6 +99,10 @@ impl<L: Language> SyntaxNodePtr<L> {
     pub fn kind(&self) -> L::Kind {
         self.kind
     }
+
+    pub fn text_range(&self) -> &TextRange {
+        &self.range
+    }
 }
 
 /// Like [`SyntaxNodePtr`], but remembers the type of node.
